@@ -1,4 +1,5 @@
 ---
+import Layout from "../layouts/layout.astro";
 const myname = 'bilal';
 const styles = 'orange';
 const usersList = ['john','mike','smith'];
@@ -11,24 +12,10 @@ const users = await response.json();
 
 
 ---
-<>
+
+
+<Layout>
 <h1 class={styles} >hello {myname} </h1>
-<ul>
-	{users.map(user => <li> {user.name} </li>) }
-</ul>
-
-{visibility ? <p>i am visible</p> : <p> visibility is currently set to false!!</p>}
-</>
 
 
-
-<style>
-	h1{ 
-		color: purple;
-	}
-
-	.orange {
-		color: orange;
-
-	}
-</style>
+<Layout/>
