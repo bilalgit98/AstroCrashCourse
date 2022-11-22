@@ -1,6 +1,7 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import Showcase from "../components/Showcase.astro";
+import Features from "../components/Features.astro";
 const myname = 'bilal';
 // const styles = 'orange';
 // const usersList = ['john','mike','smith'];
@@ -17,7 +18,8 @@ const myname = 'bilal';
 
 <Layout>
 
-<Showcase/>
+<Showcase showExtra={true} />
+<Features/>
 <h1  >hello {myname} </h1>
 
 
