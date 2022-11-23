@@ -1,5 +1,8 @@
 ---
 import Card from "./card.astro";
+
+
+
 const featuresData = [{
   title:"Zero JavaScript Runtime",
   body : "    Astro renders HTML on the server and strips away any remaining, unused JavaScript."
@@ -17,7 +20,11 @@ body: "Components only hydrate when they scroll into view. If you don't see it, 
 <section class="features">
     <div class="container">
       {featuresData.map(features => (
-      <Card title = {features.title} body= {features.body} />
+        <Card>
+          <h3>{features.title} </h3>
+          <p> {features.body} </p>
+          </Card>
+      
       ))
       }
     </div>
